@@ -1,0 +1,26 @@
+<div className="w-[1200px] bg-white shadow rounded-lg flex">
+  <div className="flex-grow grid grid-cols-4 gap-4 p-6">
+    {Array.from({ length: 8 }).map((_, index) => (
+      <div key={index} className="rounded-md border border-neutral-300 p-4 flex flex-col items-center text-center">
+        <img 
+          src={`https://tools-api.webcrumbs.org/image-placeholder/200/200/lights/${index + 1}`}
+          alt="Люстра"
+          className="w-[200px] h-[200px] object-cover mb-4"
+        />
+        <p className="font-medium text-neutral-950">Люстра {index + 1}</p>
+        <p className="text-primary-500 mt-2">₴{(index + 1) * 1000}</p>
+      </div>
+    ))}
+  </div>
+  <aside className="w-[300px] bg-neutral-100 p-6 rounded-lg">
+    <h2 className="font-title text-lg text-neutral-950 mb-4">Меню</h2>
+    <ul className="space-y-4">
+      <li className="text-neutral-700 hover:text-primary-500 cursor-pointer">Люстры</li>
+      <li className="text-neutral-700 hover:text-primary-500 cursor-pointer">Бра</li>
+      <li className="text-neutral-700 hover:text-primary-500 cursor-pointer">Торшеры</li>
+      <li className="text-neutral-700 hover:text-primary-500 cursor-pointer">Настольные лампы</li>
+      <li className="text-neutral-700 hover:text-primary-500 cursor-pointer">Оплата и доставка</li>
+      <li className="text-neutral-700 hover:text-primary-500 cursor-pointer">Контакты</li>
+    </ul>
+  </aside>
+</div>
